@@ -210,7 +210,41 @@ chol_entry = Entry(Detail_entry, textvariable=chol, width=10, font='arial 15', b
 thalach_entry = Entry(Detail_entry, textvariable=thalach, width=10, font='arial 15', bg='#ededed', fg='#222222', bd=0).place(x=320, y=170)
 oldpeak_entry = Entry(Detail_entry, textvariable=oldpeak, width=10, font='arial 15', bg='#ededed', fg='#222222', bd=0).place(x=320, y=210)
 
-################ smoking and non smoking button
+####### Report
+square_report_image = PhotoImage(file='Heart Attack Prediction System\Images\Report.png')
+report_background = Label(image=square_report_image, bg=background)
+report_background.place(x=1120, y=340)
+
+report = Label(root, font='arial 25 bold', bg='white', fg='#8dc63f')
+report.place(x=1170, y=550)
+
+report = Label(root, font='arial 10 bold', bg='white')
+report.place(x=1130, y=610)
+
+####### Graph
+
+graph_image = PhotoImage(file='Heart Attack Prediction System\Images\graph.png')
+Label(image=graph_image).place(x=600, y=270)
+Label(image=graph_image).place(x=860, y=270)
+Label(image=graph_image).place(x=600, y=500)
+Label(image=graph_image).place(x=860, y=500)
+
+################ Button
+
+#Analysis button
+analysis_button = PhotoImage(file='Heart Attack Prediction System\Images\Analysis.png')
+Button(root, image=analysis_button, bd=0, bg=background, cursor='hand2', activebackground=background).place(x=1130, y=240)
+
+#Info button
+info_button = PhotoImage(file='Heart Attack Prediction System\Images\info.png')
+Button(root, image=info_button, bd=0, bg=background, cursor='hand2', activebackground=background).place(x=10, y=240)
+
+#Save button
+
+save_button = PhotoImage(file='Heart Attack Prediction System\Images\save.png')
+Button(root, image=save_button, bd=0, bg=background, cursor='hand2', activebackground=background).place(x=1370, y=250)
+
+#smoking and non smoking button
 
 button_mode=True
 choice='smoking'
@@ -236,14 +270,11 @@ non_smoking_icon = PhotoImage(file='Heart Attack Prediction System\Images\smoker
 mode = Button(root, image=smoking_icon, bg='#dbe0e3', bd=0, cursor='hand2', command=changemode, activebackground='#dbe0e3')
 mode.place(x=350, y=495)
 
-############# logOut button
+# logOut button
 
 logout_icon = PhotoImage(file='Heart Attack Prediction System\Images\logout.png')
 logout_button = Button(root, image=logout_icon, bg='#df2d4b', cursor='hand2', bd=0, activebackground='#df2d4b')
 logout_button.place(x=1390, y=60)
-
-
-
 
 
 
